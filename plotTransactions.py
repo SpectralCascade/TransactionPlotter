@@ -20,7 +20,7 @@ def ImportTransactionData(path):
                 transactions[-1] += float(row[3])
                 balances[-1] = float(row[4])
             else:
-                dates.append(graphDates.date2num(dt.datetime.strptime(row[0], "%d/%m/%Y")))
+                dates.append(graphDates.date2num(dt.datetime.strptime(row[0], "%d %b %Y")))
                 transactions.append(float(row[3]))
                 balances.append(float(row[4]))
             lastDate = row[0]
